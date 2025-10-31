@@ -88,7 +88,7 @@ export default function CheckoutPage() {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/promo/get-all");
+      const response = await fetch("https://highway-delite-77n2.onrender.com/promo/get-all");
       const data = await response.json();
 
       if (data.success) {
@@ -352,3 +352,4 @@ export default function CheckoutPage() {
     </div>
   );
 }
+

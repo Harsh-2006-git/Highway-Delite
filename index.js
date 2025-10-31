@@ -22,7 +22,7 @@ app.use(
       "http://localhost:3000",
       "http://127.0.0.1:5500",
       "http://localhost:5173",
-      "https://alumni-mits.vercel.app",
+      "https://highway-delite-mu.vercel.app"
     ], // Add your frontend URLs
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],

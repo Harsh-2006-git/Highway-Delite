@@ -48,7 +48,7 @@ export default function ExperiencesHomepage() {
     try {
       setLoading(true);
       const response = await fetch(
-        "http://localhost:3001/experiences/experiences"
+        "https://highway-delite-77n2.onrender.com/experiences/experiences"
       );
       const data = await response.json();
       if (data.success) {
@@ -66,7 +66,7 @@ export default function ExperiencesHomepage() {
   const fetchExperienceDetails = async (experienceId: number) => {
     try {
       const response = await fetch(
-        `http://localhost:3001/experiences/experiences/${experienceId}`
+        `https://highway-delite-77n2.onrender.com/experiences/experiences/${experienceId}`
       );
       const data = await response.json();
       if (data.success) {

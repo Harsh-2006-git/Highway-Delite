@@ -9,6 +9,7 @@ import PromocodeRoutes from "./routes/promoRoutes.js";
 import helmet from "helmet";
 import cors from "cors";
 import path from "path";
+import seed from "./seed.js";
 
 dotenv.config();
 
@@ -22,7 +23,7 @@ app.use(
       "http://localhost:3000",
       "http://127.0.0.1:5500",
       "http://localhost:5173",
-      "https://highway-delite-mu.vercel.app"
+      "https://alumni-mits.vercel.app",
     ], // Add your frontend URLs
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
@@ -64,10 +65,10 @@ const startServer = async () => {
 
     // Connect to database
     await connectDB();
-    //await seed();
+    await seed();
 
     // Sync database
-    await sequelize.sync({ alter: true });
+    await sequelize.sync();
     //await sequelize.sync({ force: true });
 
     // Start server
